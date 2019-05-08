@@ -43,8 +43,6 @@ jar {
 // 打包源代码，为了方便查看源码及调试，把源码也上传到nexus仓库中
 task sourcesJar(type: Jar) {
   classifier = 'sources'
-  options.encoding = "utf-8"
-  options.charSet = "utf-8"
   from sourceSets.main.allSource
 }
 
