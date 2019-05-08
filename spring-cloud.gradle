@@ -33,7 +33,7 @@ targetCompatibility = JavaVersion.VERSION_1_8
 
 bootJar {
   // 默认只打普通jar包
-  enabled = false
+  enabled = true
 }
 //默认情况下，当`bootJar`或`bootWar`任务配置时，`jar`或者`war` 任务被禁用。通过启用`jar`或`war`任务，可以将项目配置为同时构建可执行jar或者war
 jar {
