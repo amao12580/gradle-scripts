@@ -49,8 +49,6 @@ task sourcesJar(type: Jar) {
 // 打javadoc包，为了方便查看注释，需要把javadoc也上传到nexus仓库中
 task javadocJar(type: Jar, dependsOn: javadoc) {
   classifier = 'javadoc'
-  options.encoding = "utf-8"
-  options.charSet = "utf-8"
   from javadoc.destinationDir
 }
 
