@@ -1,6 +1,6 @@
 apply plugin: 'maven'
 ext {
-  REPOSITORY_HOME = 'http://maven.aliyun.com'
+  REPOSITORY_HOME = 'http://192.168.1.234:8081'
   REPOSITORY_URL =  REPOSITORY_HOME + "/nexus/content/groups/public"
 }
 allprojects {
@@ -25,10 +25,10 @@ allprojects {
         repositories {
             mavenDeployer {
                 snapshotRepository(url: REPOSITORY_HOME + "/nexus/content/repositories/snapshots/") {
-                    authentication(userName: 'xxx', password: 'xxxx')
+                    authentication(userName: 'nexus', password: 'nexus123')
                 }
                 repository(url: REPOSITORY_HOME + "/nexus/content/repositories/releases/") {
-                    authentication(userName: 'xxx', password: 'xxxx')
+                    authentication(userName: 'nexus', password: 'nexus123')
                 }
             }
         }
